@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日常中的延伸 · b体育</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f2f4f6;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e293b;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .wrap {
+            max-width: 960px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+            padding: 2.5rem 2rem;
+            border: 1px solid #e9edf0;
+        }
+        .hero-slice {
+            margin-bottom: 2.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .hero-slice p {
+            font-size: 1.2rem;
+            letter-spacing: 0.01em;
+            color: #334155;
+            max-width: 88%;
+        }
+        .hero-slice p:first-child {
+            font-weight: 360;
+            background: #f0f3f7;
+            display: inline-block;
+            padding: 0.2rem 1rem 0.2rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #475569;
+            margin-bottom: 0.8rem;
+            border: 1px solid #dde3e9;
+        }
+        .intro-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2.4rem;
+            border: 1px solid #dce2e8;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .intro-card p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+        .intro-card p:last-child {
+            margin-bottom: 0;
+        }
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2.2rem 0 2.8rem 0;
+        }
+        .feature-item {
+            background: #ffffff;
+            flex: 1 1 180px;
+            min-width: 160px;
+            border-radius: 20px;
+            padding: 1.6rem 1.2rem;
+            border: 1px solid #e2e8ed;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            transition: all 0.15s ease;
+        }
+        .feature-item:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+            background: #fcfdfe;
+        }
+        .feature-item h3 {
+            font-size: 1.05rem;
+            font-weight: 520;
+            color: #1e293b;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.02em;
+        }
+        .feature-item p {
+            font-size: 0.9rem;
+            color: #475569;
+            line-height: 1.5;
+        }
+        .scene-block {
+            background: #f8fafb;
+            border-radius: 20px;
+            padding: 1.8rem 2rem;
+            margin: 2.2rem 0;
+            border: 1px solid #dee4ea;
+        }
+        .scene-block p {
+            margin-bottom: 0.9rem;
+        }
+        .scene-block .scene-tag {
+            font-weight: 480;
+            color: #1a2a3a;
+            display: inline-block;
+            background: #e9eef3;
+            padding: 0.05rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            border: 1px solid #d5dde5;
+            margin-right: 0.4rem;
+        }
+        .faq-mini {
+            margin: 2.4rem 0 1.6rem 0;
+            border-top: 1px solid #e2e8ef;
+            padding-top: 1.8rem;
+        }
+        .faq-mini details {
+            margin-bottom: 0.8rem;
+            border-radius: 14px;
+            padding: 0.4rem 0.8rem;
+            background: #f9fbfd;
+            border: 1px solid #e5ebf0;
+        }
+        .faq-mini details[open] {
+            background: #f6f9fc;
+        }
+        .faq-mini summary {
+            font-weight: 460;
+            cursor: pointer;
+            padding: 0.5rem 0.2rem;
+            color: #1e293b;
+            font-size: 0.95rem;
+        }
+        .faq-mini summary::-webkit-details-marker {
+            color: #6b7a8c;
+        }
+        .faq-mini .faq-answer {
+            padding: 0.4rem 0.8rem 0.8rem 0.8rem;
+            color: #3a4a5a;
+            font-size: 0.9rem;
+            border-top: 1px solid #e5ecf2;
+            margin-top: 0.2rem;
+        }
+        .mild-footer {
+            margin-top: 2.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e2e8f0;
+            text-align: left;
+            color: #5e6f80;
+            font-size: 0.9rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .mild-footer .dot-sep {
+            color: #b4c1ce;
+            padding: 0 0.3rem;
+        }
+        @media (max-width: 600px) {
+            .wrap {
+                padding: 1.8rem 1.2rem;
+            }
+            .hero-slice p {
+                font-size: 1.05rem;
+                max-width: 100%;
+            }
+            .feature-grid {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .intro-card, .scene-block {
+                padding: 1.2rem 1rem;
+            }
+            .mild-footer {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+        }
+        a {
+            color: #1e4976;
+            text-decoration: none;
+            font-weight: 450;
+            border-bottom: 1px solid #cbdae8;
+            transition: border-color 0.15s;
+        }
+        a:hover {
+            border-bottom-color: #1e4976;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="hero-slice">
+        <p>✦ 日常查询 · 对照 · 延伸</p>
+        <p>有时只是想安静地翻一翻，比一比，或者顺着线索多看一眼。</p>
+    </div>
+
+    <div class="intro-card">
+        <p>从零散的信息到结构化的整理，中间往往隔着一层筛选。如果你在关注体育相关的平台动态、界面逻辑或功能分布，<a href="https://portal-m-bsports.com">b体育</a> 是一个值得放在书签里的对照坐标。它不渲染情绪，也不制造紧迫——只是一种稳定的存在，像书架中层那本随时抽出来翻翻的册子。</p>
+        <p>页面整体很轻，没有多余的弹窗或强制引导。你可以慢慢滑动，扫一眼栏目划分，或者在某个细节上停一停。适合作为日常信息流的补充节点，而不是替代品。</p>
+    </div>
+
+    <div class="feature-grid">
+        <div class="feature-item">
+            <h3>结构清晰</h3>
+            <p>分区明确，标题与内容的层级关系自然，适合快速定位感兴趣的区域。</p>
+        </div>
+        <div class="feature-item">
+            <h3>信息密度适中</h3>
+            <p>不堆砌数据和术语，段落之间有呼吸感，阅读负担小。</p>
+        </div>
+        <div class="feature-item">
+            <h3>视觉中性</h3>
+            <p>配色克制，没有强对比或闪烁元素，长时间浏览也不容易疲劳。</p>
+        </div>
+        <div class="feature-item">
+            <h3>跳转直接</h3>
+            <p>链接和导航的指向明确，不会出现「点击这里」之类的模糊引导。</p>
+        </div>
+    </div>
+
+    <div class="scene-block">
+        <p><span class="scene-tag">📋 对照场景</span> 打开两个标签页，一边是资料库，一边是 <a href="https://portal-m-bsports.com">b体育</a>，逐项比对功能描述或界面术语，适合做文档校对或翻译参考。</p>
+        <p><span class="scene-tag">🔍 延伸阅读</span> 从某个关键词出发，顺着手头的链接进入平台，看看实际展示与预期的差异。这种轻量的「验证式浏览」往往能带来新的发现。</p>
+        <p><span class="scene-tag">📆 日常巡检</span> 每隔一段时间打开一次，留意结构有没有微调、内容有没有更新——不需要刻意记忆，看两眼就能感知变化。</p>
+    </div>
+
+    <div class="faq-mini">
+        <details>
+            <summary>这个页面主要是做什么的？</summary>
+            <div class="faq-answer">它更像一个安静的观察站。你可以把它当作日常信息流里的一个固定参照点，用于对比、查找或简单地漫游。没有复杂的功能，核心就是展示与链接。</div>
+        </details>
+        <details>
+            <summary>内容会频繁变化吗？</summary>
+            <div class="faq-answer">整体框架保持稳定，但局部内容可能会根据运营节奏做微调。如果你把它用作对照基准，建议每隔一两周留意一下细节变动。</div>
+        </details>
+        <details>
+            <summary>我可以信任这里的信息吗？</summary>
+            <div class="faq-answer">页面所呈现的内容均为公开可见的部分。建议结合你自己的判断，同时多方比对，尤其是在做重要决策或引用时保持谨慎。</div>
+        </details>
+    </div>
+
+    <div class="mild-footer">
+        <span>开放对照 · 日常延伸</span>
+        <span><span class="dot-sep">·</span> 信息仅供参考 <span class="dot-sep">·</span> 保持好奇</span>
+    </div>
+</div>
+</body>
+</html>
